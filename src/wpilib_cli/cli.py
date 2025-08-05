@@ -1,3 +1,4 @@
+import argparse
 import os.path
 
 from prompts import *
@@ -7,8 +8,7 @@ from versions_loader import load_versions
 from templates_loader import load_templates_from_github
 from examples_loader import load_examples_from_github
 
-
-def main():
+def run_cli():
     print("🚀 WPILib CLI — Project Creator\n")
 
     project_name = ask_project_name()
@@ -46,6 +46,25 @@ def main():
         print("\n✅ You selected:")
         print(f"👉 \033[1m{selected['name']}\033[0m")
 
+def main():
+    parser = argparse.ArgumentParser(
+        prog="wpilib-cli",
+        description="WPILib CLI - Command Line Interface for creating FRC projects with WPILib templates and examples."
+    )
+
+    parser.add_argument(
+        "-v", "--version",
+        action="version",
+        version="WPILib CLI v1.0.0beta",
+        help="Show the version of the WPILib CLI"
+    )
+
+    args = parser.parse_args()
+
+    if args.create:
+        run_cli()
+    else:
+        parser.print_help()
 
 if __name__ == "__main__":
     main()
