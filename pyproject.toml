@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wpilib-cli"
-version = "1.0.0"
+version = "1.0.0beta"
 authors = [
     { name = "Hao Huang", email = "huang.6224@osu.edu" },
     { name = "Adrian Johnson", email = "drinz@mit.edu" },
