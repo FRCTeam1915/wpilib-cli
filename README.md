@@ -8,7 +8,7 @@
 
 ```bash
 # Download the .whl file from the Release page
-pip3 install wpilib_cli-1.0.0b0-py3-none-any.whl
+pip3 install wpilib_cli-1.0.1b0-py3-none-any.whl
 
 # Then you can execute the CLI
 wpilib_cli
