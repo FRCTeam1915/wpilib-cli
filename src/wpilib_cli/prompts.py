@@ -17,14 +17,14 @@ def ask_team_number():
         if confirm:
             return team_num
 
-def ask_team_domain():
+def ask_team_domain(team_number):
     has_domain = questionary.confirm("🌐 Does your team have a domain?", default=False).ask()
 
     if has_domain:
         domain = questionary.text("🔤 Enter your team domain (e.g., mckinleyfirebirds.com):").ask()
         return domain.strip()
-
-    return None
+    else:
+        return f"frc.team{team_number}.org"
 
 def select_wpilib_version(versions):
     return questionary.select(

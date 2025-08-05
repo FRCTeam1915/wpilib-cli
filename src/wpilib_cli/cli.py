@@ -1,6 +1,7 @@
 import os.path
 
 from prompts import *
+from utils import domain_to_path, create_package_dirs
 from template_downloader import download_template
 from versions_loader import load_versions
 from templates_loader import load_templates_from_github
@@ -18,7 +19,7 @@ def main():
     team_number = ask_team_number()
     print(f"✅ Team {team_number} confirmed.\n")
 
-    team_domain = ask_team_domain()
+    team_domain = ask_team_domain(team_number)
     print(f"Team domain: {team_domain}\n")
 
     print("📥 Fetching available WPILib versions...")
@@ -35,7 +36,8 @@ def main():
         print("\n✅ You selected:")
         print(f"👉 \033[1m{selected['name']}\033[0m")
         project_dir = os.path.join(os.getcwd(), project_name)
-        download_template(selected['foldername'], wpilib_version, project_dir)
+        create_package_dirs(project_dir, team_domain, team_number, project_name)
+        download_template(selected['foldername'], wpilib_version, project_dir, os.path.join(domain_to_path(team_domain, team_number), project_name))
         print(f"\n🎉 Project created in: {project_dir}")
     elif start_type == "Examples":
         print("📥 Loading WPILib examples...")
