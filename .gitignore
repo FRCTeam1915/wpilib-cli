@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.manifest
+
+# Virtual environment
+venv/
+.venv/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Test coverage and profiling
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytest
+.pytest_cache/
