@@ -35,7 +35,7 @@ def main():
         print("\n✅ You selected:")
         print(f"👉 \033[1m{selected['name']}\033[0m")
         project_dir = os.path.join(os.getcwd(), project_name)
-        download_template(selected['name'], wpilib_version, project_dir)
+        download_template(selected['foldername'], wpilib_version, project_dir)
         print(f"\n🎉 Project created in: {project_dir}")
     elif start_type == "Examples":
         print("📥 Loading WPILib examples...")

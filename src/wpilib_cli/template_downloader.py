@@ -4,7 +4,7 @@ import requests
 GITHUB_BASE = "https://raw.githubusercontent.com/FRCTeam1915/wpilib-cli-backend"
 REFS_PATH = "refs/heads"
 
-def download_template(template_name, version, dest_dir):
+def download_template(folder_name, version, dest_dir):
     files = [
         "gradle/wrapper/gradle-wrapper.jar",
         "gradle/wrapper/gradle-wrapper.properties",
@@ -14,8 +14,7 @@ def download_template(template_name, version, dest_dir):
     ]
 
     for file_path in files:
-        # TODO: Fix this template name because it is not the same as the template name
-        url = f"{GITHUB_BASE}/{REFS_PATH}/{version}/templates/commandbasedskeleton/{file_path}"
+        url = f"{GITHUB_BASE}/{REFS_PATH}/{version}/templates/{folder_name}/{file_path}"
         dest_path = os.path.join(dest_dir, file_path)
 
         os.makedirs(os.path.dirname(dest_path), exist_ok=True)
