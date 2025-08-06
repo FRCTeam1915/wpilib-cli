@@ -7,6 +7,7 @@
 ```bash
 # =====
 # Make sure you are currently in the root project directory
+# Local dev
 pip3 install -e .
 wpilib-cli --help
 # =====
@@ -22,5 +23,8 @@ wpilib-cli --help
 
 > [!IMPORTANT]
 > You can now generate a Command Based Skeleton project
+
+> [!NOTE]
+> If PyCharm says unresolved reference about something, right click the `src` folder and select `Mark Directory as > Sources Root` then restart PyCharm.
 
 
