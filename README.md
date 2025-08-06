@@ -14,7 +14,7 @@ wpilib-cli --help
 
 # =====
 # or... Download the .whl file from the releases page & cd into the directory
-pip3 install wpilib_cli-1.0.2b0-py3-none-any.whl
+pip3 install wpilib_cli-1.0.0-py3-none-any.whl
 wpilib-cli --help
 # =====
 ```
