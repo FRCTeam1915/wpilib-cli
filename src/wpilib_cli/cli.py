@@ -1,12 +1,12 @@
 import argparse
 import os.path
 
-from prompts import *
-from utils import domain_to_path, create_package_dirs
-from template_downloader import download_template
-from versions_loader import load_versions
-from templates_loader import load_templates_from_github
-from examples_loader import load_examples_from_github
+from wpilib_cli.prompts import *
+from wpilib_cli.utils import domain_to_path, create_package_dirs
+from wpilib_cli.template_downloader import download_template
+from wpilib_cli.versions_loader import load_versions
+from wpilib_cli.templates_loader import load_templates_from_github
+from wpilib_cli.examples_loader import load_examples_from_github
 
 def run_cli():
     print("🚀 WPILib CLI — Project Creator\n")
@@ -57,6 +57,12 @@ def main():
         action="version",
         version="WPILib CLI v1.0.0beta",
         help="Show the version of the WPILib CLI"
+    )
+
+    parser.add_argument(
+        "-c", "--create",
+        action="store_true",
+        help="Create a new WPILib project"
     )
 
     args = parser.parse_args()
