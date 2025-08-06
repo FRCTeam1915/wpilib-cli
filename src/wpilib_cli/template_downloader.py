@@ -48,5 +48,3 @@ def download_template(folder_name, version, dest_dir, package_path):
             print(f"✅ Saved Java file to {local_path}")
         else:
             print(f"❌ Failed to download {code_file} ({response.status_code})")
-
-    print(f"\n🎉 Project created in: {dest_dir}")
