@@ -2,7 +2,7 @@
 
 🛠️WPILib-CLI is a command-line tool to generate new [WPILib](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html) robotics projects.
 
-## 🚀 Installation
+## 🚀 Local Development
 
 ```bash
 # =====
