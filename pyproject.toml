@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wpilib-cli"
-version = "1.0.1beta"
+version = "1.0.2beta"
 authors = [
     { name = "Hao Huang", email = "huang.6224@osu.edu" },
     { name = "Adrian Johnson", email = "drinz@mit.edu" },
@@ -14,7 +14,8 @@ description = "CLI tool to generate new FRC Robotics Projects"
 readme = "README.md"
 license = "MIT"
 dependencies = [
-    "questionary"
+    "questionary",
+    "requests"
 ]
 
 [project.scripts]
