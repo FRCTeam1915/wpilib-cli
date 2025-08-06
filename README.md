@@ -2,17 +2,25 @@
 
 🛠️WPILib-CLI is a command-line tool to generate new [WPILib](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html) robotics projects.
 
-## 📝 Description
-
 ## 🚀 Installation
 
 ```bash
-# TODO: Add installation instructions
+# =====
+# Make sure you are currently in the root project directory
+pip3 install -e .
+wpilib-cli --help
+# =====
+
+# =====
+# or... Download the .whl file from the releases page & cd into the directory
+pip3 install wpilib_cli-1.0.2b0-py3-none-any.whl
+wpilib-cli --help
+# =====
 ```
 
 # Working in progress...
 
-> [!NOTE]
+> [!IMPORTANT]
 > You can now generate a Command Based Skeleton project
 
 
