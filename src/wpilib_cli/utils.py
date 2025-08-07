@@ -13,3 +13,26 @@ def create_package_dirs(base_dir, domain, team_number, project_name):
     os.makedirs(full_path, exist_ok=True)
     print(f"📁 Created package directory: {full_path}")
     return full_path
+
+def update_robot_main_class(root_project_dir, team_domain, project_name):
+    package_parts = team_domain.lower().split(".")[::-1]
+    package_parts.append(project_name)
+    package_path = ".".join(package_parts)  # Java package style
+
+    gradle_file_path = os.path.join(root_project_dir, "build.gradle")
+    if not os.path.exists(gradle_file_path):
+        print(f"⚠️ build.gradle not found at {gradle_file_path}")
+        return
+
+    with open(gradle_file_path, "r") as file:
+        contents = file.read()
+
+    updated_contents = contents.replace(
+        'def ROBOT_MAIN_CLASS = "frc.robot.Main"',
+        f'def ROBOT_MAIN_CLASS = "{package_path}.Main"'
+    )
+
+    with open(gradle_file_path, "w") as file:
+        file.write(updated_contents)
+
+    print(f"✅ Updated ROBOT_MAIN_CLASS to {package_path}.Main")
