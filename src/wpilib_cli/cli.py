@@ -44,11 +44,11 @@ def run_cli():
         download_template(selected['foldername'], wpilib_version, project_dir, os.path.join(domain_to_path(team_domain, team_num), project_name))
         print(f"\n🎉 Project created in: {project_dir}\n")
 
-        print("🛠️ Rewriting WPILib preferences...\n")
+        print("🛠️ Rewriting WPILib preferences...")
         update_wpilib_preferences(project_dir, team_num)
-        print("🛠️ Rewriting robot main class...\n")
+        print("🛠️ Rewriting robot main class...")
         update_robot_main_class(project_dir, team_domain, project_name)
-        print("🛠️ Rewriting Java package declarations...\n")
+        print("🛠️ Rewriting Java package declarations...")
         update_package_path_for_java_files(os.path.join(project_dir, "src", "main", "java"), reverse_domain(team_domain, team_num), project_name)
     elif start_type == "Examples":
         print("📥 Loading WPILib examples...")
