@@ -3,7 +3,8 @@ import os
 
 from wpilib_cli.package_path_rewriter import update_package_path_for_java_files
 from wpilib_cli.prompts import *
-from wpilib_cli.utils import domain_to_path, create_package_dirs, update_robot_main_class
+from wpilib_cli.utils import domain_to_path, create_package_dirs, update_robot_main_class, reverse_domain, \
+    update_wpilib_preferences
 from wpilib_cli.template_downloader import download_template
 from wpilib_cli.versions_loader import load_versions
 from wpilib_cli.templates_loader import load_templates_from_github
