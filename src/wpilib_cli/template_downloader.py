@@ -4,6 +4,7 @@ import requests
 GITHUB_BASE = "https://raw.githubusercontent.com/FRCTeam1915/wpilib-cli-backend"
 REFS_PATH = "refs/heads"
 
+# TODO: This function is too long and should be refactored into smaller functions
 def download_template(folder_name, version, dest_dir, package_path):
     print("📄 Downloading manifest.json...")
 
