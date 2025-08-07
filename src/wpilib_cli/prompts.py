@@ -44,7 +44,7 @@ def select_project_type():
 def select_template(templates):
     choices = [
         questionary.Choice(
-            title=f"{template['name']} | {template['description']}",
+            title=f"{template['name']}",
             value=template
         )
         for template in templates
@@ -58,12 +58,12 @@ def select_template(templates):
 def select_example(examples):
     choices = [
         questionary.Choice(
-            title=f"{example['name']} | {example['description']}",
+            title=f"{example['name']}",
             value=example
         ) for example in examples
     ]
 
     return questionary.select(
-        "📦 Select a project example: (Use arrow keys)",
+        "📦 Select a project example: (Use arrow keys to select | Press enter to confirm)",
         choices=choices
     ).ask()
