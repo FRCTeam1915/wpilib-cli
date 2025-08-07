@@ -10,6 +10,7 @@ from wpilib_cli.versions_loader import load_versions
 from wpilib_cli.templates_loader import load_templates_from_github
 from wpilib_cli.examples_loader import load_examples_from_github
 
+
 def run_cli():
     print("🚀 WPILib CLI — Project Creator\n")
 
