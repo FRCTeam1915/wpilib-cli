@@ -1,5 +1,5 @@
 import argparse
-import os.path
+import os
 
 from wpilib_cli.package_path_rewriter import update_package_path_for_java_files
 from wpilib_cli.prompts import *
