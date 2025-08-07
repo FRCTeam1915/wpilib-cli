@@ -1,5 +1,12 @@
 import os
 
+
+def reverse_domain(domain, team_number):
+    if domain and domain.strip():
+        parts = domain.lower().strip().split(".")
+        return ".".join(reversed(parts))
+    return f"org.team{team_number}.frc"
+
 def domain_to_path(domain, team_number):
     if domain and domain.strip():
         parts = domain.lower().strip().split(".")
