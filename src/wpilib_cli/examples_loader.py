@@ -5,6 +5,7 @@ URL = ("https://raw.githubusercontent.com/wpilibsuite/allwpilib/refs/heads/main/
        "/first/wpilibj/examples/examples.json")
 
 def load_examples_from_github():
+    """Fetches WPILib examples from GitHub"""
     res = requests.get(URL)
     res.raise_for_status()
     return res.json()

@@ -2,11 +2,13 @@ import questionary
 
 
 def ask_project_name():
+    """Prompts the user for a project name"""
     return questionary.text(
         "📛 Enter your project name:"
     ).ask()
 
 def ask_team_number():
+    """Prompts the user for their FRC team number"""
     while True:
         team_num = questionary.text("Enter your FRC Team Number:").ask()
 
@@ -19,6 +21,7 @@ def ask_team_number():
             return team_num
 
 def ask_team_domain(team_number):
+    """Prompts the user for their team domain, with a default based on the team number"""
     has_domain = questionary.confirm("🌐 Does your team have a domain?", default=False).ask()
 
     if has_domain:
@@ -28,12 +31,14 @@ def ask_team_domain(team_number):
         return f"frc.team{team_number}.org"
 
 def select_wpilib_version(versions):
+    """Prompts the user to select a WPILib version"""
     return questionary.select(
         "🔧 Select WPILib version:",
         choices=versions
     ).ask()
 
 def select_project_type():
+    """Prompts the user to select the type of project to start with"""
     return questionary.select(
         "📁 What type of project would you like to start with?",
         choices=[
@@ -43,6 +48,7 @@ def select_project_type():
     ).ask()
 
 def select_template(templates):
+    """Prompts the user to select a project template"""
     choices = [
         questionary.Choice(
             title=f"{template['name']}",
@@ -57,6 +63,7 @@ def select_template(templates):
     ).ask()
 
 def select_example(examples):
+    """Prompts the user to select a project example"""
     choices = [
         questionary.Choice(
             title=f"{example['name']}",

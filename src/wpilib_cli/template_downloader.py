@@ -7,6 +7,7 @@ REFS_PATH = "refs/heads"
 
 # TODO: This function is too long and should be refactored into smaller functions
 def download_template(folder_name, version, dest_dir, package_path):
+    """Download a WPILib template from GitHub and save it to the specified directory"""
     print("📄 Downloading manifest.json...")
 
     manifest_url = f"{GITHUB_BASE}/{REFS_PATH}/{version}/templates/{folder_name}/manifest.json"

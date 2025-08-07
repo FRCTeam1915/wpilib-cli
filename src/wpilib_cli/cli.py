@@ -12,6 +12,7 @@ from wpilib_cli.examples_loader import load_examples_from_github
 
 
 def run_cli():
+    """Runs the WPILib CLI for creating a new project"""
     print("🚀 WPILib CLI — Project Creator\n")
 
     project_name = ask_project_name()

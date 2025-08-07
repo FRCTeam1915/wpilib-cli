@@ -3,18 +3,21 @@ import os
 
 
 def reverse_domain(domain, team_number):
+    """Reverses the domain for Java package declaration"""
     if domain and domain.strip():
         parts = domain.lower().strip().split(".")
         return ".".join(reversed(parts))
     return f"org.team{team_number}.frc"
 
 def domain_to_path(domain, team_number):
+    """Converts a domain to a file path for Java package structure"""
     if domain and domain.strip():
         parts = domain.lower().strip().split(".")
         return os.path.join(*reversed(parts)) # TODO: handle parameters unfilled
     return os.path.join("org", f"team{team_number}", "frc")
 
 def create_package_dirs(base_dir, domain, team_number, project_name):
+    """Creates the package directories for a Java project based on the team domain and number"""
     package_path = domain_to_path(domain, team_number)
     full_path = os.path.join(base_dir, "src", "main", "java", package_path, project_name)
     os.makedirs(full_path, exist_ok=True)
@@ -22,6 +25,7 @@ def create_package_dirs(base_dir, domain, team_number, project_name):
     return full_path
 
 def update_robot_main_class(root_project_dir, team_domain, project_name):
+    """Updates the ROBOT_MAIN_CLASS in build.gradle to match the Java package structure"""
     package_parts = team_domain.lower().split(".")[::-1]
     package_parts.append(project_name)
     package_path = ".".join(package_parts)  # Java package style
@@ -45,6 +49,7 @@ def update_robot_main_class(root_project_dir, team_domain, project_name):
     print(f"✅ Updated ROBOT_MAIN_CLASS to {package_path}.Main\n")
 
 def update_wpilib_preferences(project_dir, team_number):
+    """Updates the wpilib_preferences.json file with the team number"""
     prefs_path = os.path.join(project_dir, ".wpilib", "wpilib_preferences.json")
 
     with open(prefs_path, "r", encoding="utf-8") as f:
