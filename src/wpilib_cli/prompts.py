@@ -1,5 +1,6 @@
 import questionary
 
+
 def ask_project_name():
     return questionary.text(
         "📛 Enter your project name:"
