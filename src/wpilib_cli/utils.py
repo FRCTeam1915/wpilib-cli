@@ -36,3 +36,17 @@ def update_robot_main_class(root_project_dir, team_domain, project_name):
         file.write(updated_contents)
 
     print(f"✅ Updated ROBOT_MAIN_CLASS to {package_path}.Main")
+
+def update_wpilib_preferences(project_dir, team_number):
+    prefs_path = os.path.join(project_dir, ".wpilib", "wpilib_preferences.json")
+
+    with open(prefs_path, "r", encoding="utf-8") as f:
+        prefs = json.load(f)
+
+    # Set the team number
+    prefs["teamNumber"] = int(team_number)
+
+    with open(prefs_path, "w", encoding="utf-8") as f:
+        json.dump(prefs, f, indent=4)
+
+    print(f"✅ Team number updated to {team_number} in wpilib_preferences.json")
