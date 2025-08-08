@@ -52,7 +52,7 @@ def run_cli():
         print("🛠️ Rewriting Java package declarations...")
         update_package_path_for_java_files(os.path.join(project_dir, "src", "main", "java"), reverse_domain(team_domain, team_num), project_name)
     elif start_type == "Examples":
-        print("📥 Loading WPILib examples...")
+        print("📥 Fetching WPILib examples...")
         examples = load_examples_from_github()
         selected = select_example(examples)
         print("\n✅ You selected:")
