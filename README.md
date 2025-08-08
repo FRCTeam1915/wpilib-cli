@@ -1,4 +1,13 @@
-# wpilib-cli
+<div align="center">
+    <a href="https://mckinleyfirebirds.com">
+        <picture>
+            <img alt="WPILib-CLI" src="https://raw.githubusercontent.com/FRCTeam1915/wpilib-cli/refs/heads/main/assets/logo.svg" height="128px">
+        </picture>
+    </a>
+    <h1>WPILib-CLI</h1>
+</div>
+
+## Getting Started
 
 🛠️WPILib-CLI is a command-line tool to generate new [WPILib](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html) robotics projects.
 
