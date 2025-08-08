@@ -30,6 +30,9 @@ def run_cli():
     wpilib_version = select_wpilib_version(load_versions())
     print(f"✅ Selected WPILib version: {wpilib_version}\n")
 
+    programming_language = ask_programming_language()
+    print(f"✅ Selected programming language: {programming_language}\n")
+
     start_type = select_project_type()
     print(f"📦 Starting with: {start_type}\n")
 
