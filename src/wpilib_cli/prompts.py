@@ -75,3 +75,12 @@ def select_example(examples):
         "📦 Select a project example: (Use arrow keys to select | Press enter to confirm)",
         choices=choices
     ).ask()
+def ask_programming_language():
+    return questionary.select(
+        "💻 What programming language would you like to use?",
+        choices=[
+            "Java",
+            "C++",
+            "Python",
+        ]
+    ).ask()
