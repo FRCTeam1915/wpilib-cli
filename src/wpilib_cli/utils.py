@@ -65,3 +65,31 @@ def update_wpilib_preferences(project_dir, team_number):
         json.dump(prefs, f, indent=4)
 
     print(f"✅ Team number updated to {team_number} in wpilib_preferences.json\n")
+
+
+def make_gradlew_executable(project_dir):
+    gradlew_path = Path(project_dir) / "gradlew"
+    system = platform.system()
+
+    if not gradlew_path.exists():
+        print(f"❌ gradlew not found in {project_dir}")
+        return False
+
+    try:
+        if system in ["Linux", "Darwin"]:  # macOS and Linux
+            subprocess.run(["chmod", "+x", str(gradlew_path)], check=True)
+        print(f"✅ gradlew is executable for {system}")
+        return True
+    except subprocess.CalledProcessError:
+        print(f"❌ Failed to set gradlew as executable on {system}")
+        return False
+
+
+def run_gradle_command(project_dir, args):
+    system = platform.system()
+    gradle_cmd = ["./gradlew"] if system in ["Linux", "Darwin"] else ["gradlew.bat"]
+
+    try:
+        subprocess.run(gradle_cmd + args, cwd=Path(project_dir), check=True)
+    except subprocess.CalledProcessError:
+        print(f"❌ Gradle command failed: {' '.join(args)}")
