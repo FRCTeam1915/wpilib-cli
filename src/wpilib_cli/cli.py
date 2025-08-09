@@ -4,7 +4,7 @@ import os
 from wpilib_cli.package_path_rewriter import update_package_path_for_java_files
 from wpilib_cli.prompts import *
 from wpilib_cli.utils import domain_to_path, create_package_dirs, update_robot_main_class, reverse_domain, \
-    update_wpilib_preferences
+    update_wpilib_preferences, run_gradle_command, make_gradlew_executable
 from wpilib_cli.template_downloader import download_template
 from wpilib_cli.versions_loader import load_versions
 from wpilib_cli.templates_loader import load_templates_from_github
@@ -21,17 +21,16 @@ def run_cli():
         return
 
     team_num = ask_team_number()
-    print(f"✅ Team {team_num} confirmed.\n")
 
     team_domain = ask_team_domain(team_num)
-    print(f"Team domain: {team_domain}\n")
+    print(f"Set team domain to \"{team_domain}\"\n")
 
     print("📥 Fetching available WPILib versions...")
     wpilib_version = select_wpilib_version(load_versions())
-    print(f"✅ Selected WPILib version: {wpilib_version}\n")
 
+    # TODO: Add support for other languages
     programming_language = ask_programming_language()
-    print(f"✅ Selected programming language: {programming_language}\n")
+
 
     start_type = select_project_type()
     print(f"📦 Starting with: {start_type}\n")
