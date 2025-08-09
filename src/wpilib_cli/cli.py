@@ -54,6 +54,10 @@ def run_cli():
         update_robot_main_class(project_dir, team_domain, project_name)
         print("🛠️ Rewriting Java package declarations...")
         update_package_path_for_java_files(os.path.join(project_dir, "src", "main", "java"), reverse_domain(team_domain, team_num), project_name)
+        print("🛠️ Making gradlew executable...")
+        make_gradlew_executable(project_dir)
+        print("\n🏗 Running gradlew build...")
+        run_gradle_command(project_dir, ["build"])
     elif start_type == "Examples":
         print("📥 Fetching WPILib examples...")
         examples = load_examples_from_github()
