@@ -14,24 +14,17 @@
 ## 🚀 Local Development
 
 ```bash
-# =====
-# Make sure you are currently in the root project directory
-# Local dev
-pip3 install -e .
+git clone https://github.com/FRCTeam1915/wpilib-cli.git
+# Depending on your system, it's either pip or pip3
+pip install -e .
 wpilib-cli --help
-# =====
-
-# =====
-# or... Download the .whl file from the releases page & cd into the directory
-pip3 install wpilib_cli-1.0.0-py3-none-any.whl
-wpilib-cli --help
-# =====
 ```
 
 # Working in progress...
 
 > [!IMPORTANT]
 > You can now generate a Command Based Skeleton project
+> It will now build the project automatically after the creation
 
 > [!NOTE]
 > If PyCharm says unresolved reference about something, right click the `src` folder and select `Mark Directory as > Sources Root` then restart PyCharm.
