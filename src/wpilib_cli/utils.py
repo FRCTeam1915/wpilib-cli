@@ -1,5 +1,8 @@
 import json
 import os
+import platform
+import subprocess
+from pathlib import Path
 
 
 def reverse_domain(domain, team_number):
