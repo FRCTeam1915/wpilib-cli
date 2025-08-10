@@ -42,6 +42,8 @@ def run_cli():
         print("\n✅ You selected:")
         print(f"👉 \033[1m{selected['name']}\033[0m")
 
+        selected_extensions = select_extensions(fetch_extensions())
+
         project_dir = os.path.join(os.getcwd(), project_name)
         create_package_dirs(project_dir, team_domain, team_num, project_name)
         download_template(selected['foldername'], wpilib_version, project_dir, os.path.join(domain_to_path(team_domain, team_num), project_name))
