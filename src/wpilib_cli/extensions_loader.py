@@ -1,5 +1,7 @@
 import requests
 
+from wpilib_cli.utils import run_gradle_command
+
 
 def fetch_extensions():
     url = "https://raw.githubusercontent.com/FRCTeam1915/wpilib-cli-backend/refs/heads/extensions/extensions.json"
