@@ -89,5 +89,6 @@ def _create_project_from_template(project_name: str, team_num: str, team_domain:
         # FIXME: Workaround for Phoenix 5 & 6
         run_gradle_command(project_dir, ["build"])
 
-    print("\n🏗 Running gradlew build...")
     run_gradle_command(project_dir, ["build"])
+
+    print("\n🎉 Project setup complete!")
