@@ -57,6 +57,14 @@ def run_cli():
         update_package_path_for_java_files(os.path.join(project_dir, "src", "main", "java"), reverse_domain(team_domain, team_num), project_name)
         print("🛠️ Making gradlew executable...")
         make_gradlew_executable(project_dir)
+
+        for ext_url in selected_extensions:
+            print(f"🔌 Adding extension to the project: {ext_url}")
+            add_extension(project_dir, ext_url)
+
+            # FIXME: This is a workaround to ensure Phoenix 5 & 6 dont cry because they're stupid
+            run_gradle_command(project_dir, ["build"])
+
         print("\n🏗 Running gradlew build...")
         run_gradle_command(project_dir, ["build"])
     elif start_type == "Examples":
