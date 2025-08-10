@@ -94,3 +94,18 @@ def ask_programming_language():
             "Python",
         ]
     ).ask()
+
+
+def select_extensions(extensions):
+    choices = [
+        questionary.Choice(
+            title=f"{ext['name']} – {ext['description']}",
+            value=ext['json_url']
+        )
+        for ext in extensions
+    ]
+
+    return questionary.checkbox(
+        "Select the vendor extensions you want to add to your project:",
+        choices=choices
+    ).ask()
