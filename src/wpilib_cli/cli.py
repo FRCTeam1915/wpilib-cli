@@ -1,6 +1,7 @@
 import argparse
 import os
 
+from wpilib_cli.extensions_loader import fetch_extensions, add_extension
 from wpilib_cli.package_path_rewriter import update_package_path_for_java_files
 from wpilib_cli.prompts import *
 from wpilib_cli.utils import domain_to_path, create_package_dirs, update_robot_main_class, reverse_domain, \
