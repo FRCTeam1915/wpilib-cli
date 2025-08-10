@@ -52,10 +52,13 @@ def run_cli():
 
         print("🛠️ Rewriting WPILib preferences...")
         update_wpilib_preferences(project_dir, team_num)
+
         print("🛠️ Rewriting robot main class...")
         update_robot_main_class(project_dir, team_domain, project_name)
+
         print("🛠️ Rewriting Java package declarations...")
         update_package_path_for_java_files(os.path.join(project_dir, "src", "main", "java"), reverse_domain(team_domain, team_num), project_name)
+
         print("🛠️ Making gradlew executable...")
         make_gradlew_executable(project_dir)
 
