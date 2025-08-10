@@ -6,3 +6,8 @@ def fetch_extensions():
     response = requests.get(url)
     response.raise_for_status()
     return response.json()
+
+
+def add_extension(project_dir, ext_url):
+    """Adds a WPILib extension from the provided JSON URL"""
+    run_gradle_command(project_dir, ["vendordep", f"--url={ext_url}"])
