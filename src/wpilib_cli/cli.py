@@ -8,7 +8,7 @@ from wpilib_cli.utils import domain_to_path, create_package_dirs, update_robot_m
 from wpilib_cli.template_downloader import download_template
 from wpilib_cli.versions_loader import load_versions
 from wpilib_cli.templates_loader import load_templates_from_github
-from wpilib_cli.examples_loader import load_examples_from_github
+from wpilib_cli.examples_loader import fetch_examples_from_github
 
 
 def run_cli():
@@ -59,7 +59,7 @@ def run_cli():
         run_gradle_command(project_dir, ["build"])
     elif start_type == "Examples":
         print("📥 Fetching WPILib examples...")
-        examples = load_examples_from_github()
+        examples = fetch_examples_from_github()
         selected = select_example(examples)
         print("\n✅ You selected:")
         print(f"👉 \033[1m{selected['name']}\033[0m")
