@@ -51,9 +51,6 @@ def _create_project_from_template(project_name: str, team_num: str, team_domain:
     print("📥 Loading WPILib templates...")
     selected_template = select_template(fetch_templates_from_github(wpilib_version, language))
 
-    print("\n✅ You selected:")
-    print(f"👉 \033[1m{selected_template['name']}\033[0m")
-
     selected_extensions: list[str] = select_extensions(fetch_extensions_from_github())
 
     project_dir = os.path.join(os.getcwd(), project_name)
