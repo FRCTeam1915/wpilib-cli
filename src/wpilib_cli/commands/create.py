@@ -80,7 +80,8 @@ def _create_project_from_template(project_name: str, team_num: str, team_domain:
     )
 
     print("🛠️ Making gradlew executable...")
-    make_gradlew_executable(project_dir)
+    if not make_gradlew_executable(project_dir):
+        raise RuntimeError("❌ Failed to make gradlew executable")
 
     for ext_url in selected_extensions:
         print(f"🔌 Adding extension to the project: {ext_url}")
