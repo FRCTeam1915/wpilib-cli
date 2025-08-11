@@ -24,8 +24,12 @@ wpilib-cli --help
 > You can now generate a Command Based Skeleton project
 > It will now build the project automatically after the creation
 
-## Supported Vendor Extensions
+## Supported Languages
+| Language | Support Status                                                               |
+|----------|------------------------------------------------------------------------------|
+| Java     | **Partial support** — project creation works... Still working in progress... |
 
+## Supported Vendor Extensions
 | Extension  | Description                                 |
 |------------|---------------------------------------------|
 | Phoenix 5  | CTRE motor controller library (version 5.x) |
