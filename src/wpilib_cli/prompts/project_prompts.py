@@ -67,8 +67,8 @@ def ask_programming_language() -> Optional[str]:
         "💻 What programming language would you like to use?",
         choices=[
             "Java",
-            "C++",
-            "Python",
+            # "C++",
+            # "Python",
         ],
     ).ask()
 
