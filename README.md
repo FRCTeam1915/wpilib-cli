@@ -20,6 +20,10 @@ wpilib-cli --help
 
 ## Working in progress...
 
+> [!WARNING]
+> Some dependencies require other dependencies to be installed on your system
+> Will be fixed in the future
+
 > [!IMPORTANT]
 > You can now generate a Command Based Skeleton project
 > It will now build the project automatically after the creation
@@ -27,14 +31,19 @@ wpilib-cli --help
 ## Supported Languages
 | Language | Support Status                                                               |
 |----------|------------------------------------------------------------------------------|
-| Java     | **Partial support** — project creation works... Still working in progress... |
+| Java     | Still working in progress... |
 
 ## Supported Vendor Extensions
 | Extension  | Description                                 |
 |------------|---------------------------------------------|
-| Phoenix 5  | CTRE motor controller library (version 5.x) |
+| DogLog     | Logging library                             |
+| Grapple    | LaserCAN                                    |
 | Phoenix 6  | CTRE motor controller library (version 6.x) |
+| Phoenix 5  | CTRE motor controller library (version 5.x) |
+| PhotonLib  | Photon Vision library                       |
 | RevLib     | REV Robotics hardware libraries             |
+| ThriftyLib | Nova motor controller                       |
+| YAGSL      | Yet Another Generic Swerve Library          |
 
 
 > [!NOTE]
