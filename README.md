@@ -29,8 +29,8 @@ wpilib-cli --help
 > It will now build the project automatically after the creation
 
 ## Supported Languages
-| Language | Support Status                                                               |
-|----------|------------------------------------------------------------------------------|
+| Language | Support Status               |
+|----------|------------------------------|
 | Java     | Still working in progress... |
 
 ## Supported Vendor Extensions
