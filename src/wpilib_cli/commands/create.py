@@ -32,7 +32,6 @@ def run_create_command() -> None:
     programming_language = ask_programming_language().lower()
 
     start_type = select_project_type()
-    print(f"📦 Starting with: {start_type}\n")
 
     if start_type == "Templates":
         _create_project_from_template(project_name, team_num, team_domain, wpilib_version, programming_language)
