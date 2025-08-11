@@ -82,7 +82,7 @@ def select_project_type() -> Optional[str]:
         "📂 What type of project would you like to start with?",
         choices=[
             "Templates",
-            "Examples"
+            # "Examples"
         ],
     ).ask()
 
