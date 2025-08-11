@@ -36,7 +36,7 @@ def run_create_command() -> None:
     if start_type == "Templates":
         _create_project_from_template(project_name, team_num, team_domain, wpilib_version, programming_language)
     else:
-        print("Currently only 'Templates' project creation is implemented.")
+        print("❌ Currently only 'Templates' project creation is implemented.")
 
 
 def _create_project_from_template(project_name: str, team_num: str, team_domain: str, wpilib_version: str, language: str) -> None:
