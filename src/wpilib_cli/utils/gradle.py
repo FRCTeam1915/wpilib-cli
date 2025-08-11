@@ -39,4 +39,5 @@ def run_gradle_command(project_dir: str, args: list[str]) -> None:
     try:
         subprocess.run(gradle_cmd + args, cwd=Path(project_dir), check=True)
     except subprocess.CalledProcessError as e:
-        print(f"❌ Failed to execute {' '.join(gradle_cmd + args)}: {e}")
+        print(f"❌ Failed to execute {' '.join(gradle_cmd + args)}")
+        exit(e.returncode)
