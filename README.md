@@ -7,8 +7,6 @@
     <h1>WPILib-CLI</h1>
 </div>
 
-## Getting Started
-
 🛠️WPILib-CLI is a command-line tool to generate new [WPILib](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html) robotics projects.
 
 ## 🚀 Local Development
@@ -20,13 +18,20 @@ pip install -e .
 wpilib-cli --help
 ```
 
-# Working in progress...
+## Working in progress...
 
 > [!IMPORTANT]
 > You can now generate a Command Based Skeleton project
 > It will now build the project automatically after the creation
 
+## Supported Vendor Extensions
+
+| Extension  | Description                                 |
+|------------|---------------------------------------------|
+| Phoenix 5  | CTRE motor controller library (version 5.x) |
+| Phoenix 6  | CTRE motor controller library (version 6.x) |
+| RevLib     | REV Robotics hardware libraries             |
+
+
 > [!NOTE]
 > If PyCharm says unresolved reference about something, right click the `src` folder and select `Mark Directory as > Sources Root` then restart PyCharm.
-
-
