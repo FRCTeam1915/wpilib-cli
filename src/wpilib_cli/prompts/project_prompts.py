@@ -102,7 +102,7 @@ def select_template(templates: List[Dict[str, str]]) -> Optional[Dict[str, str]]
     ]
 
     return questionary.select(
-        "📦 Select a project template:",
+        "📦 Select a template:",
         choices=choices
     ).ask()
 
