@@ -18,7 +18,7 @@ def run_create_command() -> None:
     """
     print("🚀 WPILib CLI — Project Creator\n")
 
-    project_name = ask_project_name()
+    project_name = ask_project_name().lower()
 
     team_num = ask_team_number()
 
