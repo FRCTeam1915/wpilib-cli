@@ -122,6 +122,6 @@ def select_extensions(extensions: List[Dict[str, str]]) -> Optional[List[str]]:
     ]
 
     return questionary.checkbox(
-        "Select the vendor extensions you want to add to your project:",
+        "Select the vendor libraries you want to add to your project:",
         choices=choices
     ).ask()
