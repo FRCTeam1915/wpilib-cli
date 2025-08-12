@@ -27,3 +27,8 @@ def test_convert_domain_to_path_with_none():
     expected = os.path.join("org", "team1915", "frc")
     assert files.convert_domain_to_path(None, "1915") == expected
 
+
+def test_convert_domain_to_path_with_empty_string():
+    expected = os.path.join("org", "team1915", "frc")
+    assert files.convert_domain_to_path("", "1915") == expected
+    assert files.convert_domain_to_path("  ", "1915") == expected
