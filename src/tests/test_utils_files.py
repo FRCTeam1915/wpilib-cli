@@ -21,3 +21,9 @@ def test_reverse_domain_with_empty_string():
 def test_convert_domain_to_path_with_valid_domain():
     expected = os.path.join("com", "mckinleyfirebirds")
     assert files.convert_domain_to_path("mckinleyfirebirds.com", "1915") == expected
+
+
+def test_convert_domain_to_path_with_none():
+    expected = os.path.join("org", "team1915", "frc")
+    assert files.convert_domain_to_path(None, "1915") == expected
+
