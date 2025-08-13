@@ -20,10 +20,6 @@ wpilib-cli --help
 
 ## Working in progress...
 
-> [!WARNING]
-> Some dependencies require other dependencies to be installed on your system
-> Will be fixed in the future
-
 > [!IMPORTANT]
 > You can now generate a Command Based Skeleton project
 > It will now build the project automatically after the creation
