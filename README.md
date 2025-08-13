@@ -41,6 +41,9 @@ wpilib-cli --help
 | ThriftyLib | Nova motor controller                       |
 | YAGSL      | Yet Another Generic Swerve Library          |
 
+## Little Demonstration
+Check out this [video](https://www.youtube.com/watch?v=Y-nSDGd3G2A)!
+
 
 > [!NOTE]
 > If PyCharm says unresolved reference about something, right click the `src` folder and select `Mark Directory as > Sources Root` then restart PyCharm.
