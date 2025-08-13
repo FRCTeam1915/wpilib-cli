@@ -41,6 +41,14 @@ wpilib-cli --help
 | ThriftyLib | Nova motor controller                       |
 | YAGSL      | Yet Another Generic Swerve Library          |
 
+
+## Supported Templates
+| Name                 | Status |
+|----------------------|--------|
+| CommandBasedSkeleton | ✅      |
+| Educational          | ⚠️     |
+
+
 ## Little Demonstration
 Check out this [video](https://www.youtube.com/watch?v=Y-nSDGd3G2A)!
 
