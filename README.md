@@ -52,6 +52,5 @@ wpilib-cli --help
 ## Little Demonstration
 Check out this [video](https://www.youtube.com/watch?v=Y-nSDGd3G2A)!
 
-
 > [!NOTE]
-> If PyCharm says unresolved reference about something, right click the `src` folder and select `Mark Directory as > Sources Root` then restart PyCharm.
+> Since this is just a toy project for recreational programming, Python should be good enough for now. If performance becomes an issue in the future, we can port everything into Rust! Sorry C++ fans, but Rust is cooler! 😎
