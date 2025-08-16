@@ -5,7 +5,8 @@ from wpilib_cli.loaders.extensions_loader import fetch_extensions_from_github, a
 from wpilib_cli.loaders.templates_loader import fetch_templates_from_github
 from wpilib_cli.loaders.versions_loader import fetch_wpilib_versions_from_github
 from wpilib_cli.prompts.project_prompts import ask_project_name, ask_team_number, select_wpilib_version, \
-    ask_programming_language, select_project_type, select_template, select_extensions, ask_team_domain
+    ask_programming_language, select_project_type, select_template, select_extensions, ask_team_domain, \
+    prompt_open_project
 from wpilib_cli.utils.files import convert_domain_to_path, create_package_dirs, reverse_domain
 from wpilib_cli.utils.gradle import make_gradlew_executable, run_gradle_command
 from wpilib_cli.utils.java_utils import update_robot_main_class, update_package_path_for_java_files
@@ -89,3 +90,5 @@ def _create_project_from_template(project_name: str, team_num: str, team_domain:
     run_gradle_command(project_dir, ["build"])
 
     print("\n🎉 Project setup complete!")
+
+    prompt_open_project(project_dir)
