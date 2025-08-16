@@ -1,6 +1,10 @@
+import subprocess
 from typing import Optional, List, Dict
 
 import questionary
+
+from wpilib_cli.utils.ide_checker import is_vscode_installed, is_intellij_installed, is_eclipse_installed, \
+    is_vim_installed, is_neovim_installed, is_emacs_installed
 
 
 def ask_project_name() -> str:
@@ -125,3 +129,51 @@ def select_extensions(extensions: List[Dict[str, str]]) -> Optional[List[str]]:
         "Select the vendor libraries you want to add to your project:",
         choices=choices
     ).ask()
+
+def prompt_open_project(project_dir: str) -> None:
+    editors = []
+
+    if is_vscode_installed():
+        editors.append("Visual Studio Code")
+    if is_intellij_installed():
+        editors.append("IntelliJ IDEA")
+    if is_eclipse_installed():
+        editors.append("Eclipse")
+    if is_vim_installed():
+        editors.append("Vim")
+    if is_neovim_installed():
+        editors.append("Neovim")
+    if is_emacs_installed():
+        editors.append("Emacs")
+
+    if not editors:
+        print("⚠️ No supported IDEs found. Please open the project manually!")
+
+    open_project = questionary.confirm(
+        "Do you want to open this project in an IDE?"
+    ).ask()
+
+    if not open_project:
+        print("Project will not be opened.")
+        return
+
+    chosen_ide = questionary.select(
+        "Select an IDE to open the project:",
+        choices=editors
+    ).ask()
+
+    # Do we really want to bump the Python version up to 3.10 so we can use match? - Hao
+    try:
+        if chosen_ide == "Visual Studio Code":
+            subprocess.run(["code", project_dir], check=True)
+        elif chosen_ide == "IntelliJ IDEA":
+            subprocess.run(["idea", project_dir], check=True)
+        elif chosen_ide == "Eclipse":
+            print("TODO: Implement Eclipse support")
+            exit(1)
+        elif chosen_ide == "Vim":
+            subprocess.run(["vim", project_dir], check=True)
+        elif chosen_ide == "Emacs":
+            subprocess.run(["emacs", project_dir], check=True)
+    except FileNotFoundError:
+        print(f"❌ '{chosen_ide}' command not found. Make sure it is installed and available in PATH.")
