@@ -25,12 +25,12 @@ def ask_team_number() -> str:
     :return: The team number provided by the user
     """
     while True:
-        team_num = questionary.text("Enter your FRC Team Number:").ask()
+        team_num = questionary.text("🔢 Enter your FRC Team Number:").ask()
         if not team_num or not team_num.isdigit():
             print("❌ Please enter a valid numeric team number.")
             continue
 
-        confirm = questionary.confirm(f"Is {team_num} correct?").ask()
+        confirm = questionary.confirm(f"🔢 Is {team_num} correct?").ask()
         if confirm:
             return team_num
 
