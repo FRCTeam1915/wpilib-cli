@@ -28,7 +28,7 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    background: linear-gradient(190deg,#12181b 60%,#202737) fixed;
+    background: linear-gradient(190deg, #12181b 60%, #202737) fixed;
 }
 
 h1 {
@@ -58,9 +58,11 @@ button {
     cursor: pointer;
     transition: border-color 0.25s;
 }
+
 button:hover {
     border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
