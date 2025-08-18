@@ -44,9 +44,12 @@ wpilib-cli --help
 | CommandBasedSkeleton | ✅      |
 | Educational          | ⚠️     |
 
+> [!IMPORTANT]
+> `Desktop Support` and `JUnit 5` are enabled by default
+
 
 ## 🎥 Little Demonstration
 Check out this [video](https://www.youtube.com/watch?v=Y-nSDGd3G2A)!
 
 > [!NOTE]
-> Since this is just a toy project for recreational programming, Python should be good enough for now. If performance becomes an issue in the future, we can port everything into Rust! Sorry C++ fans, but Rust is cooler! 😎
+> Since this is just a toy project for recreational programming, Python should be good enough for now.
