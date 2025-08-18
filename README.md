@@ -18,18 +18,14 @@ pip install -e .
 wpilib-cli --help
 ```
 
-## Working in progress...
+## ⏳ Working in progress...
 
-> [!IMPORTANT]
-> You can now generate a Command Based Skeleton project
-> It will now build the project automatically after the creation
-
-## Supported Languages
+## 🗣️ Supported Languages
 | Language | Support Status               |
 |----------|------------------------------|
-| Java     | Still working in progress... |
+| ☕ Java   | Still working in progress... |
 
-## Supported Vendor Extensions
+## 🔌 Supported Vendor Extensions
 | Extension  | Description                                 |
 |------------|---------------------------------------------|
 | DogLog     | Logging library                             |
@@ -42,14 +38,14 @@ wpilib-cli --help
 | YAGSL      | Yet Another Generic Swerve Library          |
 
 
-## Supported Templates
+## 📂 Supported Templates
 | Name                 | Status |
 |----------------------|--------|
 | CommandBasedSkeleton | ✅      |
 | Educational          | ⚠️     |
 
 
-## Little Demonstration
+## 🎥 Little Demonstration
 Check out this [video](https://www.youtube.com/watch?v=Y-nSDGd3G2A)!
 
 > [!NOTE]
