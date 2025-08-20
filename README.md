@@ -26,19 +26,19 @@ wpilib-cli --help
 | ☕ Java   | Still working in progress... |
 
 ## 🔌 Supported Vendor Extensions
-| Extension  | Description                         |
-|------------|-------------------------------------|
-| DogLog     | Logging library                     |
-| Grapple    | LaserCAN                            |
-| MapleSim   | Simulation                          |
-| Phoenix 5  | CTRE motor controller (version 5.x) |
-| Phoenix 6  | CTRE motor controller (version 6.x) |
-| PhotonLib  | Photon Vision library               |
-| ReduxLib   | Redux Robotics                      |
-| RevLib     | REV Robotics hardware libraries     |
-| Studica    | VMX-pi or navX-MXP                  |
-| ThriftyLib | Nova motor controller               |
-| YAGSL      | Yet Another Generic Swerve Library  |
+| Extension  | Description                         | Current URL                                                                                                             |
+|------------|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| DogLog     | Logging library                     | https://doglog.dev/vendordep.json                                                                                       |
+| Grapple    | LaserCAN                            | https://storage.googleapis.com/grapple-frc-maven/libgrapplefrc2025.json                                                 |
+| MapleSim   | Simulation                          | https://shenzhen-robotics-alliance.github.io/maple-sim/vendordep/maple-sim.json                                         |
+| Phoenix 5  | CTRE motor controller (version 5.x) | https://maven.ctr-electronics.com/release/com/ctre/phoenix/Phoenix5-frc2025-latest.json                                 |
+| Phoenix 6  | CTRE motor controller (version 6.x) | https://maven.ctr-electronics.com/release/com/ctre/phoenix6/latest/Phoenix6-frc2025-latest.json                         |
+| PhotonLib  | Photon Vision library               | https://maven.photonvision.org/repository/internal/org/photonvision/photonlib-json/1.0/photonlib-json-1.0.json          |
+| ReduxLib   | Redux Robotics                      | https://frcsdk.reduxrobotics.com/ReduxLib_2025.json                                                                     |
+| REVLib     | REV Robotics hardware libraries     | https://software-metadata.revrobotics.com/REVLib-2025.json                                                              |
+| Studica    | VMX-pi or navX-MXP                  | https://raw.githubusercontent.com/FRCTeam1915/wpilib-cli-backend/refs/heads/extensions/extensions/Studica-2025.0.1.json |
+| ThriftyLib | Nova motor controller               | https://docs.home.thethriftybot.com/ThriftyLib.json                                                                     |
+| YAGSL      | Yet Another Generic Swerve Library  | https://broncbotz.org/YAGSL-Lib/yagsl/yagsl.json                                                                        |
 
 
 ## 📂 Supported Templates
