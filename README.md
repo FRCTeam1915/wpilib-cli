@@ -26,16 +26,19 @@ wpilib-cli --help
 | ☕ Java   | Still working in progress... |
 
 ## 🔌 Supported Vendor Extensions
-| Extension  | Description                                 |
-|------------|---------------------------------------------|
-| DogLog     | Logging library                             |
-| Grapple    | LaserCAN                                    |
-| Phoenix 6  | CTRE motor controller library (version 6.x) |
-| Phoenix 5  | CTRE motor controller library (version 5.x) |
-| PhotonLib  | Photon Vision library                       |
-| RevLib     | REV Robotics hardware libraries             |
-| ThriftyLib | Nova motor controller                       |
-| YAGSL      | Yet Another Generic Swerve Library          |
+| Extension  | Description                         |
+|------------|-------------------------------------|
+| DogLog     | Logging library                     |
+| Grapple    | LaserCAN                            |
+| MapleSim   | Simulation                          |
+| Phoenix 5  | CTRE motor controller (version 5.x) |
+| Phoenix 6  | CTRE motor controller (version 6.x) |
+| PhotonLib  | Photon Vision library               |
+| ReduxLib   | Redux Robotics                      |
+| RevLib     | REV Robotics hardware libraries     |
+| Studica    | VMX-pi or navX-MXP                  |
+| ThriftyLib | Nova motor controller               |
+| YAGSL      | Yet Another Generic Swerve Library  |
 
 
 ## 📂 Supported Templates
