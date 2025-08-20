@@ -45,6 +45,9 @@ wpilib-cli --help
 >
 > You guys suck Studica, please fix your Maven repository!
 
+> [!IMPORTANT]
+> An URL is wrong? Feel free to open a PR [here](https://github.com/FRCTeam1915/wpilib-cli-backend/tree/extensions)
+
 ## 📂 Supported Templates
 | Name                 | Status |
 |----------------------|--------|
