@@ -21,9 +21,9 @@ wpilib-cli --help
 ## ⏳ Working in progress...
 
 ## 🗣️ Supported Languages
-| Language | Support Status               |
-|----------|------------------------------|
-| ☕ Java   | Still working in progress... |
+| Language | Support Status         |
+|----------|------------------------|
+| ☕ Java   | Working in progress... |
 
 ## 🔌 Supported Vendor Extensions
 | Extension  | Description                         | Current URL                                                                                                             |
