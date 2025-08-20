@@ -40,6 +40,10 @@ wpilib-cli --help
 | ThriftyLib | Nova motor controller               | https://docs.home.thethriftybot.com/ThriftyLib.json                                                                     |
 | YAGSL      | Yet Another Generic Swerve Library  | https://broncbotz.org/YAGSL-Lib/yagsl/yagsl.json                                                                        |
 
+> [!NOTE]
+> It is impossible to install Studica via `./gradlew vendordep` because it will generate an http 403 error
+>
+> You guys suck Studica, please fix your Maven repository!
 
 ## 📂 Supported Templates
 | Name                 | Status |
