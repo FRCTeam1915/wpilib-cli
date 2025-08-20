@@ -45,7 +45,7 @@ wpilib-cli --help
 | Name                 | Status |
 |----------------------|--------|
 | CommandBasedSkeleton | ✅      |
-| Educational          | ⚠️     |
+| Educational Robot    | ⚠️     |
 
 > [!IMPORTANT]
 > `Desktop Support` and `JUnit 5` are enabled by default
