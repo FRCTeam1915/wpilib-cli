@@ -115,12 +115,12 @@ def select_extensions(extensions: List[Dict[str, str]]) -> Optional[List[str]]:
     """
     Prompts the user to select vendor extensions to add to their project
     :param extensions: The list of available vendor extensions
-    :return: A list of selected json urls
+    :return: A list of selected extension names
     """
     choices = [
         questionary.Choice(
             title=f"{ext['name']} – {ext['description']}",
-            value=ext['json_url']
+            value=ext['name']
         )
         for ext in extensions
     ]
@@ -131,6 +131,11 @@ def select_extensions(extensions: List[Dict[str, str]]) -> Optional[List[str]]:
     ).ask()
 
 def prompt_open_project(project_dir: str) -> None:
+    """
+    Prompts the user to open the project in an IDE of their choice
+    :param project_dir:  The directory of the project to open
+    :return: None
+    """
     editors = []
 
     if is_vscode_installed():

@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Set
 
 import requests
 
@@ -16,11 +16,30 @@ def fetch_extensions_from_github() -> List[Dict[str, str]]:
     return res.json()
 
 
-def add_extension_to_project(project_dir: str, ext_url: str) -> None:
+def add_extension_to_project(project_dir: str, extension_name: str, extensions: List[Dict[str, str]], added_extensions: Set[str] = None) -> None:
     """
-    Adds an extension to the project by running the vendordep command with the provided URL
+    Adds a vendor extension to the project by running the `vendordep` Gradle task
     :param project_dir: The directory of the project
-    :param ext_url: The URL of the extension to add
+    :param extension_name: The name of the extension to add
+    :param extensions: The list of available extensions
+    :param added_extensions: A set of already added extensions to avoid duplicates
     :return: None
     """
-    run_gradle_command(project_dir, ["vendordep", f"--url={ext_url}"])
+
+    if added_extensions is None:
+        added_extensions = set()
+
+    if extension_name in added_extensions:
+        return
+
+    extension = next((e for e in extensions if e["name"] == extension_name), None)
+    if not extension:
+        return
+
+    for dependency in extension.get("dependencies", []):
+        add_extension_to_project(project_dir, dependency, extensions, added_extensions)
+
+    print(f"🔌 Adding extension to the project: {extension['name']}")
+    run_gradle_command(project_dir, ["vendordep", f"--url={extension['json_url']}"])
+    run_gradle_command(project_dir, ["build"])
+    added_extensions.add(extension_name)

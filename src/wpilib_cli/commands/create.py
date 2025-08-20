@@ -80,14 +80,9 @@ def _create_project_from_template(project_name: str, team_num: str, team_domain:
     if not make_gradlew_executable(project_dir):
         raise RuntimeError("❌ Failed to make gradlew executable")
 
-    for ext_url in selected_extensions:
-        print(f"🔌 Adding extension to the project: {ext_url}")
-        add_extension_to_project(project_dir, ext_url)
-
-        # FIXME: Workaround for Phoenix 5 & 6
-        run_gradle_command(project_dir, ["build"])
-
-    run_gradle_command(project_dir, ["build"])
+    added_extensions = set()
+    for extension_name in selected_extensions:
+        add_extension_to_project(project_dir, extension_name, fetch_extensions_from_github(), added_extensions)
 
     print("\n🎉 Project setup complete!")
 
