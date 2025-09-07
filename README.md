@@ -62,4 +62,4 @@ wpilib-cli --help
 Check out this [video](https://www.youtube.com/watch?v=Y-nSDGd3G2A)!
 
 > [!NOTE]
-> Since this is just a toy project for recreational programming, Python should be good enough for now.
+> Since this is just a toy project for recreational programming, Python should be good enough for now. My apologies for slow development! We're college students, and we need to prioritize school work and life!
